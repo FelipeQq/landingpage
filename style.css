@@ -1,7 +1,9 @@
 body {
-  min-width: 1400px; 
-  max-width: 100%; 
+  /* min-width: 1400px;  */
+  min-width: 1280px; 
   font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin: 0 auto 0;
 }
 
 @media screen and (max-width: 1900px) {
