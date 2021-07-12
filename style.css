@@ -7,10 +7,5 @@ body {
 }
 
 @media screen and (max-width: 1900px) {
-  .section-notebook-title{
-    width: 85%;
-  }
-  .section-notebook {
-    top: 380px;
-  }
+
 }
