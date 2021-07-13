@@ -8,10 +8,11 @@ async function postData(url = '', data = {},) {
     body: JSON.stringify(data)
   });
 }
-    
+
+const formContact = document.querySelector('#form-contact');
 const btn = document.querySelector("#button-contact");
 
-btn.addEventListener("click", function(e){
+formContact.addEventListener("submit", function(e){
   e.preventDefault();
 
   const name = document.querySelector("#name-contact").value;
@@ -22,14 +23,14 @@ btn.addEventListener("click", function(e){
   const text = document.querySelector("#text-contact").value;
 
   const data = {"fullName": name, email, phone, state, city, "description": text }
-  console.log(data)
 
   postData('https://api.dev.fretec.app/api/email-contact', data).then(respose => console.log('email enviado'))
 })
 
+const formLicensed = document.querySelector('#be-licensed')
 const btnLicensed = document.querySelector("#button-licensed");
 
-btnLicensed.addEventListener("click", function(e){
+formLicensed.addEventListener("submit", function(e){
   e.preventDefault();
 
   const firstName = document.querySelector("#first-name-licensed").value;
