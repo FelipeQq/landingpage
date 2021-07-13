@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
-    <script type="text/javascript" src="./utils/cidade-estados.js"></script>
-    <script src="./utils/service.js" defer></script>
+    <script type="text/javascript" src="./src/js/cidade-estados.js"></script>
+    <script src="./src/js/service.js" defer></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
@@ -27,7 +27,7 @@
     <header id='topo' class="absolute inset-y-0 left-0 w-full p-24 z-10">
         <div class="flex flex-row w-full justify-between">
             <div>
-                <img class="w-44 h-28" src="./utils/c2.png" alt="logo-fretec">
+                <img class="w-44 h-28" src="./src/asset/c2.png" alt="logo-fretec">
             </div>
             <div class="flex flex-row gap-8 text-white text-3xl">
                 <a href="#" target="_blank">Seja um Licenciado</a>
@@ -37,7 +37,7 @@
     </header>
     <section class="relative">
         <div style="background-color:#020C42; height: 1078px;" class="block">
-            <div style="background-image: url(./utils/motoboy.png);" class="w-full h-full opacity-20 bg-no-repeat bg-cover bg-start"></div>
+            <div style="background-image: url(./src/asset/motoboy.png);" class="w-full h-full opacity-20 bg-no-repeat bg-cover bg-start"></div>
         </div>
         <div class="absolute inset-y-48 pl-20 pr-20 mt-28 z-10 grid grid-cols-2">
             <div>
@@ -52,7 +52,7 @@
     
             <div class="flex justify-end">
                 <div style="border-top-left-radius:92px; border-bottom-right-radius:92px; width: 479px; height: 852px;" class="flex flex-col items-center justify-center bg-yellow-500">
-                    <div class="w-10/12">
+                    <div class="w-10/12" id="licensed" >
                         <form class="grid gap-7 mt-4" id="be-licensed">
                             <b class="text-5xl text-white">Seja um</br> Licenciado</b>
                             <div class="grid grid-cols-3 gap-7">
@@ -107,6 +107,16 @@
                             </div>
                         </form>
                     </div>
+
+                    <div class="w-full h-full mt-20 mb-20 flex flex-col items-center hidden" id="send">
+                        <div class="w-10/12 h-full flex flex-col justify-between items-center">
+                            <h1 style="color:#020C42;" class="text-5xl font-bold">PERFEITO!</h1>
+            
+                            <p class="text-white text-2xl font-semibold text-center">Nós já recebemos os seus dados e estaremos entrando em contato logo!</p>
+            
+                            <span style="background-color:#020C42;" class="text-2xl p-3 text-white rounded">Enviado!</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,7 +130,7 @@
                 </div>
                 <div class="w-96 pl-8">
                     <b style="color:#020C42" class="text-4xl">Conheça e entenda a nossa plataforma.</b>
-                    <img src="./utils/logo-fretec2.jpg" alt="logo-fretec2">
+                    <img src="./src/asset/logo-fretec2.jpg" alt="logo-fretec2">
                 </div>
             </div>
             <div>
@@ -152,8 +162,8 @@
                 </h2>
             </div>
             <div class="absolute right-0 bottom-0 pr-24">
-                <!-- <img style="height: 735px;" src="./utils/people.png" alt="pessoa-fretec"> -->
-                <img src="./utils/people.png" alt="pessoa-fretec">
+                <!-- <img style="height: 735px;" src="./src/asset/people.png" alt="pessoa-fretec"> -->
+                <img src="./src/asset/people.png" alt="pessoa-fretec">
             </div>
         </div>
     </section>
@@ -169,7 +179,7 @@
             <div style="height: 466px;" class="flex flex-row text-white w-full items-center justify-between mt-24 gap-8">
                 <div style="background-color:#020C42; width: 382px;" class="flex flex-col items-center h-full p-10 rounded-xl">
                     <p class="font-bold text-2xl text-center">Sem escritório</p>
-                    <img class="p-10 mt-8 mb-2" src="./utils/icon-pc.png" alt="computador">
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/icon-pc.png" alt="computador">
                     <p class="text-xl w-full text-center">
                         Autonomia e flexibilidade de operação
                     </p>
@@ -177,7 +187,7 @@
 
                 <div style="background-color:#020C42; width: 382px;" class="flex flex-col items-center h-full p-10 rounded-xl">
                     <p class="font-bold text-2xl text-center">Suporte</p>
-                    <img class="p-10 mt-8 mb-2" src="./utils/icon-tp.png" alt="computador">
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/icon-tp.png" alt="computador">
                     <p class="text-xl w-full text-center">
                         Suporte técnico e operacional
                     </p>
@@ -185,7 +195,7 @@
 
                 <div style="background-color:#020C42; width: 382px;" class="flex flex-col items-center h-full p-10 rounded-xl">
                     <p class="font-bold text-2xl text-center">Retorno rápido</p>
-                    <img class="p-10 mt-8 mb-2" src="./utils/icon-value.png" alt="computador">
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/icon-value.png" alt="computador">
                     <p class="text-xl w-full text-center">
                         Payback: Rápido retorno sobre o investimento
                     </p>
@@ -197,12 +207,12 @@
 
     <section style="height: 1080px;" class="w-full relative mb-24 mt-32">
         <div style="background-color:#020C42;" class="h-full">
-            <div style="background-image: url(./utils/img-2.png);" class="w-full h-full opacity-20 bg-no-repeat bg-cover bg-start"></div>
+            <div style="background-image: url(./src/asset/img-2.png);" class="w-full h-full opacity-20 bg-no-repeat bg-cover bg-start"></div>
         </div>
         <div class="p-24">
             <div class="section-notebook-title absolute top-56 text-6xl text-white w-1/2">
                 <h1><span class="text-yellow-500 font-bold">Tecnologia</span> de Ponta</h1>
-                <h2 class="text-white text-2xl mt-6 w-8/12 ">
+                <h2 class="text-white text-2xl mt-6 w-8/12">
                     Infraestrutura completa para atender todas as necessidades 
                     de uma operação eficiente. Servidores, suporte e um time 
                     de programadores sempre à disposição para lhe ajudar,
@@ -211,13 +221,13 @@
                 </h2>
             </div>
 
-            <div class="absolute bottom-0 right-0 w-3/5">
-                <img class="w-full h-full" src="./utils/notebook.png" alt="notebook-fretec">
+            <div class="absolute bottom-0 right-0 w-4/6">
+                <img class="w-full h-full" src="./src/asset/notebook.png" alt="notebook-fretec">
             </div>
         </div>
     </section>
 
-    <section class="relative mt-60 p-24">
+    <section class="relative mt-30 p-24">
         <div style="color: #020C42" class="w-full flex flex-col items-center mb-56">
             <h1 class="text-5xl font-bold w-8/12 text-center">
                 <span class="text-yellow-500">Diversas modalidades</span> para atender todas as demandas
@@ -241,13 +251,13 @@
             </div>
             
             <div>
-                <img class="w-full h-full rounded-r-3xl shadow" src="./utils/bike-fretec.png" alt="bicicleta-fretec">
+                <img class="w-full h-full rounded-r-3xl shadow" src="./src/asset/bike-fretec.png" alt="bicicleta-fretec">
             </div>
         </div>
 
         <div class="grid grid-cols-3 w-full text-white text-2xl relative mt-44">
             <div>
-                <img class="w-full h-full rounded-l-3xl shadow" src="./utils/car-fretec.png" alt="carro-de-frete-fretec">
+                <img class="w-full h-full rounded-l-3xl shadow" src="./src/asset/car-fretec.png" alt="carro-de-frete-fretec">
             </div>
             <div style="background-color: #020C42;" class="flex items-center p-14 w-full rounded-r-3xl font-normal col-span-2">
                 <p class="w-full text-2xl text-right">
@@ -276,13 +286,13 @@
             </div>
             
             <div>
-                <img class="w-full h-full rounded-r-3xl shadow" src="./utils/truck-fretec.png" alt="caminhao-fretec">
+                <img class="w-full h-full rounded-r-3xl shadow" src="./src/asset/truck-fretec.png" alt="caminhao-fretec">
             </div>
         </div>
 
         <div class="grid grid-cols-3 w-full text-white text-2xl relative mt-44">
             <div>
-                <img class="w-full h-full rounded-l-3xl shadow" src="./utils/car2-fretec.png" alt="carro-com-objetos-na-mala-fretec">
+                <img class="w-full h-full rounded-l-3xl shadow" src="./src/asset/car2-fretec.png" alt="carro-com-objetos-na-mala-fretec">
             </div>
             <div style="background-color: #020C42;" class="flex items-center p-14 w-full rounded-r-3xl font-normal col-span-2">
                 <p class="w-full text-2xl text-right">
@@ -296,67 +306,80 @@
 
     <section class="bg-white flex items-center justify-center mt-20">
         <div style="background-color:#020C42;" class="p-10 text-white rounded-3xl w-1/2 flex flex-col items-start justify-center">
-            <p class="text-5xl font-bold">Entre em <span class="text-yellow-500">Contato</span></p>
-            <form class="mt-12 w-full z-10 text-black" id="form-contact">
-                <input type="text" placeholder="Nome Completo" id="name-contact" required class="p-3 rounded h-10 w-full">
-                <input type="email" placeholder="E-mail" id="email-contact" required class="p-3 rounded h-10 w-full mt-8">
-                <div class="mt-8 flex flex-row gap-8">
-                    <input type="text" placeholder="Telefone" id="phone-contact" onkeypress="$(this).mask('(00) 00000-0000')" required class="p-3 rounded h-10 w-1/3">
-                    <select class="p-3 rounded h-10 w-1/3" id="estado" onchange="buscaCidades2(this.value)" >
-                        <option value="">Estado</option>
-                        <option value="AC">AC</option>
-                        <option value="AL">AL</option>
-                        <option value="AP">AP</option>
-                        <option value="AM">AM</option>
-                        <option value="BA">BA</option>
-                        <option value="CE">CE</option>
-                        <option value="DF">DF</option>
-                        <option value="ES">ES</option>
-                        <option value="GO">GO</option>
-                        <option value="MA">MA</option>
-                        <option value="MT">MT</option>
-                        <option value="MS">MS</option>
-                        <option value="MG">MG</option>
-                        <option value="PA">PA</option>
-                        <option value="PB">PB</option>
-                        <option value="PR">PR</option>
-                        <option value="PE">PE</option>
-                        <option value="PI">PI</option>
-                        <option value="RR">RR</option>
-                        <option value="RO">RO</option>
-                        <option value="RJ">RJ</option>
-                        <option value="RN">RN</option>
-                        <option value="RS">RS</option>
-                        <option value="SC">SC</option>
-                        <option value="SP">SP</option>
-                        <option value="SE">SE</option>
-                        <option value="TO">TO</option>
-                    </select>
-                    <select class="p-3 rounded h-10 w-1/3" id="cidade2">
-                        <option value="">Cidade</option>
-                    </select>
-                </div>
-                <div class="w-full mt-8 flex flex-row">
-                    <textarea class="w-2/3 h-32 p-3 rounded" id="text-contact" placeholder="Digite sua mensagem"></textarea>
-                    <div class="w-1/3 p-8">
-                        <button type="submit" id="button-contact" class="w-full text-2xl h-10 bg-yellow-500 rounded">Enviar</button>
+            <div class="w-full z-10" id="contact">
+                <p class="text-5xl font-bold">Entre em <span class="text-yellow-500">Contato</span></p>
+                <form class="mt-12 w-full z-10 text-black" id="form-contact">
+                    <input type="text" placeholder="Nome Completo" id="name-contact" required class="p-3 rounded h-10 w-full">
+                    <input type="email" placeholder="E-mail" id="email-contact" required class="p-3 rounded h-10 w-full mt-8">
+                    <div class="mt-8 flex flex-row gap-8">
+                        <input type="text" placeholder="Telefone" id="phone-contact" onkeypress="$(this).mask('(00) 00000-0000')" required class="p-3 rounded h-10 w-1/3">
+                        <select class="pl-3 rounded h-10 w-1/3" id="estado" onchange="buscaCidades2(this.value)" >
+                            <option value="">Estado</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RR">RR</option>
+                            <option value="RO">RO</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                        <select class="pl-3 rounded h-10 w-1/3" id="cidade2">
+                            <option value="">Cidade</option>
+                        </select>
                     </div>
+                    <div class="w-full mt-8 flex flex-row">
+                        <textarea class="w-2/3 h-32 p-3 rounded" id="text-contact" placeholder="Digite sua mensagem"></textarea>
+                        <div class="w-1/3 p-8">
+                            <button type="submit" id="button-contact" class="w-full text-2xl h-10 bg-yellow-500 rounded">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="w-full flex flex-col items-center hidden" id="send-contact">
+                <div class="w-10/12 h-full flex flex-col justify-between items-center gap-8">
+                    <h1 class="text-5xl font-bold">PERFEITO!</h1>
+    
+                    <p class="text-white text-2xl font-semibold text-center">Nós já recebemos os seus dados e estaremos entrando em contato logo!</p>
+    
+                    <span class="text-2xl p-3 text-white rounded">Seu dados foram enviados!</span>
                 </div>
-            </form>
+            </div>
         </div>
+        
     </section>
     <footer style="background-color:#020C42;" class="w-full flex items-center justify-between h-48 mt-8 p-24 relative mt-40">
         <div class="z-10">
-            <a href='#topo'><img src="./utils/c2.png" alt="logo-fretec"></a>
+            <a href='#topo'><img src="./src/asset/c2.png" alt="logo-fretec"></a>
         </div>
         <div class="flex flex-col text-white text-2xl font-bold">
             <p>FRETEC © 2021</p>
             <p>Todos os direitos reservados.</p>
         </div>
         <div class="flex flex-row gap-8 z-10">
-            <a target="__blank" href="https://www.instagram.com/fretec.app/"><img src="./utils/icon-instagram.png" alt="icon-instagram"></a>
-            <a target="__blank" href="https://www.facebook.com/fretecapp/"><img src="./utils/icon-facebook.png" alt="icon-facebook"></a>
-            <a target="__blank" href="https://play.google.com/store/apps/details?id=com.fretecentregas&hl=pt_BR&gl=US"><img src="./utils/icon-playstore.png" alt="icon-playstore"></a>
+            <a target="__blank" href="https://www.instagram.com/fretec.app/"><img src="./src/asset/icon-instagram.png" alt="icon-instagram"></a>
+            <a target="__blank" href="https://www.facebook.com/fretecapp/"><img src="./src/asset/icon-facebook.png" alt="icon-facebook"></a>
+            <a target="__blank" href="https://play.google.com/store/apps/details?id=com.fretecentregas&hl=pt_BR&gl=US"><img src="./src/asset/icon-playstore.png" alt="icon-playstore"></a>
         </div>
     </footer>
 </body>
