@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
     
     <script type="text/javascript" src="./utils/cidade-estados.js"></script>
-    <script src="./utils/service.js"></script>
+    <script src="./utils/service.js" defer></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
@@ -53,7 +53,6 @@
             <div class="flex justify-end">
                 <div style="border-top-left-radius:92px; border-bottom-right-radius:92px; width: 479px; height: 852px;" class="flex flex-col items-center justify-center bg-yellow-500">
                     <div class="w-10/12">
-                        
                         <form class="grid gap-7 mt-4" id="seja-um-licenciado">
                             <b class="text-5xl text-white">Seja um</br> Licenciado</b>
                             <div class="grid grid-cols-3 gap-7">
@@ -92,15 +91,15 @@
                                 </select>
                             </div>
                             <div class="grid grid-cols-2 gap-7">
-                                <input type="email" required placeholder="E-mail" class="p-3 rounded h-10 col-span-2"/>
-                                <input type="text" required placeholder="Nome" class="p-3 rounded h-10"/>
-                                <input type="text" required placeholder="Sobrenome" class="p-3 rounded h-10"/>
-                                <input type="text" name="telefone" id="telefone" maxlength="15" onkeypress="$(this).mask('0000-0000')" placeholder="Telefone" class="p-3 rounded h-10 col-span-2"/>
-                                <input type="text" onkeypress="$(this).mask('(00) 00000-0000')" required placeholder="Celular" class="p-3 rounded h-10 col-span-2"/>
-                                <textarea required placeholder="Como conheceu a FRETEC?" class="top-0 p-3 rounded h-36 col-span-2"></textarea>
+                                <input type="email" required placeholder="E-mail" id="email-licensed" class="p-3 rounded h-10 col-span-2"/>
+                                <input type="text" required placeholder="Nome" id="first-name-licensed" class="p-3 rounded h-10"/>
+                                <input type="text" required placeholder="Sobrenome" id="last-name-licensed" class="p-3 rounded h-10"/>
+                                <input type="text" name="telefone" id="telefone" id="phone-licensed" maxlength="15" onkeypress="$(this).mask('0000-0000')" placeholder="Telefone" class="p-3 rounded h-10 col-span-2"/>
+                                <input type="text" onkeypress="$(this).mask('(00) 00000-0000')" id="cellphone-licensed" required placeholder="Celular" class="p-3 rounded h-10 col-span-2"/>
+                                <textarea required placeholder="Como conheceu a FRETEC?" id="text-licensed" class="top-0 p-3 rounded h-36 col-span-2"></textarea>
                             </div>
                             <div class="w-full flex justify-end mt-8">
-                                <button style="background-color:#020C42;" id="botao-licenciado" type="submit" class="w-40 h-10 text-white rounded text-2xl font-bold">Enviar</button>
+                                <button style="background-color:#020C42;" id="button-licensed" type="submit" class="w-40 h-10 text-white rounded text-2xl font-bold">Enviar</button>
                             </div>
                             <div class="flex flex-row items-center gap-2 mt-4">
                                 <input class="w-6 h-6 rounded" type="checkbox">
@@ -298,12 +297,12 @@
     <section class="bg-white flex items-center justify-center mt-20">
         <div style="background-color:#020C42;" class="p-10 text-white rounded-3xl w-1/2 flex flex-col items-start justify-center">
             <p class="text-5xl font-bold">Entre em <span class="text-yellow-500">Contato</span></p>
-            <form class="mt-12 w-full z-10 text-black" id="entre-em-contato">
-                <input type="text" placeholder="Nome Completo" required class="p-3 rounded h-10 w-full">
-                <input type="email" placeholder="E-mail" required class="p-3 rounded h-10 w-full mt-8">
+            <form class="mt-12 w-full z-10 text-black" id="form-contact">
+                <input type="text" placeholder="Nome Completo" id="name-contact" required class="p-3 rounded h-10 w-full">
+                <input type="email" placeholder="E-mail" id="email-contact" required class="p-3 rounded h-10 w-full mt-8">
                 <div class="mt-8 flex flex-row gap-8">
-                    <input type="text" placeholder="Telefone" onkeypress="$(this).mask('(00) 00000-0000')" required class="p-3 rounded h-10 w-1/3">
-                    <select class="p-3 rounded h-10 w-1/3" id="estado"  onchange="buscaCidades2(this.value)">
+                    <input type="text" placeholder="Telefone" id="phone-contact" onkeypress="$(this).mask('(00) 00000-0000')" required class="p-3 rounded h-10 w-1/3">
+                    <select class="p-3 rounded h-10 w-1/3" id="estado" onchange="buscaCidades2(this.value)" >
                         <option value="">Estado</option>
                         <option value="AC">AC</option>
                         <option value="AL">AL</option>
@@ -338,9 +337,9 @@
                     </select>
                 </div>
                 <div class="w-full mt-8 flex flex-row">
-                    <textarea class="w-2/3 h-32 p-3 rounded" placeholder="Digite sua mensagem"></textarea>
+                    <textarea class="w-2/3 h-32 p-3 rounded" id="text-contact" placeholder="Digite sua mensagem"></textarea>
                     <div class="w-1/3 p-8">
-                        <button type="submit" id="botao-contato" class="w-full text-2xl h-10 bg-yellow-500 rounded">Enviar</button>
+                        <button type="submit" id="button-contact" class="w-full text-2xl h-10 bg-yellow-500 rounded">Enviar</button>
                     </div>
                 </div>
             </form>
@@ -361,10 +360,4 @@
         </div>
     </footer>
 </body>
-<script>
-    var form = document.getElementById("entre-em-contato");
-    document.getElementById("botao-contato").addEventListener("click", function () {
-        form.submit();
-    });
-</script>
 </html>
