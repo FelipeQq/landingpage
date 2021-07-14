@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name = "viewport" content = "width = 960" />
+    <meta name="description" content="Gerencie e empreenda com uma plataforma robusta que te oferece uma oportunidade 
+        única de ingressar no promissor setor de delivery e logística urbana, 
+        possibilitando rentabilidade com baixo custo de investimento.">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript" src="./src/js/cidade-estados.js"></script>
+    <script src="./src/js/service.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    <title>Seja um franquiado</title>
+</head>
+<body class="relative bg-white">
+    <header id='topo' class="absolute inset-y-0 left-0 w-full p-24 z-10">
+        <div class="flex flex-row w-full justify-between items-center">
+            <div>
+                <img class="" src="./src/asset/logo1.png" alt="logo-fretec">
+            </div>
+            <div class="flex flex-row gap-8 text-white text-3xl">
+                <a href="seja-licenciado.html">Seja um Licenciado</a>
+                <a href="#">Logston</a>
+            </div>
+        </div>
+    </header>
+    <section class="relative">
+        <div style="height: 1078px;" class="block bg-black">
+        </div>
+        <div class="absolute inset-y-48 pl-20 pr-20 z-10 grid grid-cols-2 items-center gap-12">
+            <div class="">
+                <img src="./src/asset/Delivery-amico.png" alt="imagem-logo">
+                <!-- <div style="background-image: url(./src/asset/Delivery-amico.png);" class="w-full h-full bg-no-repeat bg-cover bg-start"></div> -->
+            </div>
+            <div>
+                <h1 class="text-yellow-500 text-6xl font-bold"><span style="color: #2282F2;">Sua plataforma de</span> delivery e logística urbana <span style="color: #2282F2;">white label</span></h1>
+                <h2 class="text-white text-xl mt-16">
+                    Crie e desenvolva sua própria marca de delivery, 
+                    com toda a praticidade e tecnologia de uma plataforma 
+                    robusta que oferece total suporte ao negócio, 
+                    desenvolvida para conquistar o mercado.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-32 w-full p-24 flex flex-col justify-center items-center">
+        <div class="flex flex-col h-auto">
+            <div class="flex flex-row items-center justify-center gap-2">
+                <div class="w-1/4">
+                    <b class="text-4xl text-right text-black">Conheça e entenda a ferramenta.</b>
+                </div>
+                <div style="width: 855px; height: 492px;" class="bg-yellow-500 w-4/6 rounded p-5 z-10">
+                    <embed src="https://www.youtube.com/embed/F9Bo89m2f6g" allowfullscreen="true" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proposta" style="height: 1080px;" class="bg-black relative w-full p-24 grid items-center  z-10">
+        <div class="flex flex-row gap-16 items-center justify-between">
+            <div style="border-top-left-radius:92px; border-bottom-right-radius:92px; width: 479px; height: 852px; background-color: #F26A22;" class="flex flex-col items-center justify-center">
+                <div class="w-10/12" id="licensed" >
+                    <form class="grid gap-7 mt-4" id="be-licensed">
+                        <b class="text-5xl text-white">Conheça nossa proposta!</b>
+                        <div class="grid grid-cols-3 gap-7">
+                            <select class="h-10 pl-2 rounded" id="estado" onchange="buscaCidades(this.value)">
+                                <option value="">Estado</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RR">RR</option>
+                                <option value="RO">RO</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
+                            <select class="h-10 col-span-2 pl-2 rounded" id="cidade">
+                                <option value="">Cidade</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-7">
+                            <input type="email" required placeholder="E-mail" id="email-licensed" class="p-3 rounded h-10 col-span-2"/>
+                            <input type="text" required placeholder="Nome" id="first-name-licensed" class="p-3 rounded h-10"/>
+                            <input type="text" required placeholder="Sobrenome" id="last-name-licensed" class="p-3 rounded h-10"/>
+                            <input type="text" name="telefone" id="phone-licensed" maxlength="15" onkeypress="$(this).mask('0000-0000')" placeholder="Telefone" class="p-3 rounded h-10 col-span-2"/>
+                            <input type="text" onkeypress="$(this).mask('(00) 00000-0000')" id="cellphone-licensed" required placeholder="Celular" class="p-3 rounded h-10 col-span-2"/>
+                            <textarea required placeholder="Como conheceu a FRETEC?" id="text-licensed" class="top-0 p-3 rounded h-36 col-span-2"></textarea>
+                        </div>
+                        <div class="w-full flex justify-end mt-8">
+                            <button id="button-licensed" type="submit" class="w-40 h-10 text-white rounded text-2xl bg-black font-bold">Enviar</button>
+                        </div>
+                        <div class="flex flex-row items-center gap-2 mt-4">
+                            <input class="w-6 h-6 rounded" type="checkbox">
+                            <b class="text-sm text-white">Aceito receber novidades e promoções</br> no meu e-mail informado.</b>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="w-full h-full mt-20 mb-20 flex flex-col items-center hidden" id="send">
+                    <div class="w-10/12 h-full flex flex-col justify-between items-center">
+                        <h1 class="text-5xl text-black font-bold">PERFEITO!</h1>
+        
+                        <p class="text-white text-2xl font-semibold text-center">Nós já recebemos os seus dados e estaremos entrando em contato logo!</p>
+        
+                        <span class="text-2xl bg-black p-3 text-white rounded">Enviado!</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-1/2">
+                <h1 class="text-5xl text-white font-bold"><span style="color: #2282F2;">O que é uma plataforma</span> White-Label?</h1>
+                <h2 class="text-2xl text-white mt-11 mb-24">
+                    White Label é um conceito de mercado que descreve a 
+                    terceirização do desenvolvimento de produtos e serviços, 
+                    criando um molde que pode ser personalizado e redistribuído. 
+                    Não arque com custos de criação e meses de desenvolvimento, 
+                    a solução que sua marca precisa já chegou até você.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-20 w-full p-24">
+        <div class="flex flex-col items-center justify-center">
+            <div class="flex flex-col w-1/2">
+                <h1 style="color:#020C42" class="text-center font-bold text-6xl">
+                    <span style="color: #2282F2;">Uma solução digital</span> para diversos segmentos
+                </h1>
+
+                <h3 class="text-2xl text-center mt-16">
+                    White Label é um conceito de mercado que descreve a terceirização 
+                    do desenvolvimento de produtos e serviços, criando um molde que pode 
+                    ser personalizado e redistribuído.
+                    <br>
+                    <br>
+                    Não arque com custos de criação e meses de desenvolvimento, 
+                    a solução que sua marca precisa já chegou até você.
+                </h3>
+            </div>
+            <div style="height: 466px;" class="flex flex-row text-white w-full items-center mt-24 overflow-x-auto z-10 relative">
+                <div style="width: 382px;" class="flex flex-col items-center h-full p-10 rounded-xl absolute top-0 bg-black">
+                    <p class="font-bold text-2xl text-center">Farmácia e Remédios</p>
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/remedio.png" alt="farmácia">
+                    <p class="text-xl w-full text-center">
+                        Comodidade e facilidade em pedir e 
+                        receber medicamentos a qualquer momento.
+                    </p>
+                </div>
+
+                <div style="width: 382px; left: 400px;" class="flex flex-col items-center h-full bg-black p-10 rounded-xl absolute top-0">
+                    <p class="font-bold text-2xl text-center">Flores e Presentes</p>
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/buque-de-flores.png" alt="flores-e-presentes">
+                    <p class="text-xl w-full text-center">
+                        Surpreendendo aquela pessoa especial 
+                        com uma entrega especial.
+                    </p>
+                </div>
+
+                <div style="width: 382px; left: 800px;" class="flex flex-col items-center h-full bg-black p-10 rounded-xl absolute top-0">
+                    <p class="font-bold text-2xl text-center">Alimentos</p>
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/burger.png" alt="alimentos">
+                    <p class="text-xl w-full text-center">
+                        Autonomia e flexibilidade de operação
+                    </p>
+                </div>
+
+                <div style="width: 382px; left: 1200px;" class="flex flex-col items-center h-full bg-black p-10 rounded-xl absolute top-0">
+                    <p class="font-bold text-2xl text-center">Supermercados</p>
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/compras.png" alt="supermercados">
+                    <p class="text-xl w-full text-center">
+                        Toda a praticidade em receber as compras do 
+                        mercado no conforto de casa.
+                    </p>
+                </div>
+
+                <div style="width: 382px; left: 1600px;" class="flex flex-col items-center h-full bg-black p-10 rounded-xl absolute top-0">
+                    <p class="font-bold text-2xl text-center">Bebidas e Frioso</p>
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/cerveja.png" alt="bebidas-e-frios">
+                    <p class="text-xl w-full text-center">
+                        Bebidas geladas e produtos de qualidade 
+                        adquiridos no momento do uso.
+                    </p>
+                </div>
+
+                <div style="width: 382px; left: 2000px;" class="flex flex-col items-center h-full bg-black p-10 rounded-xl absolute top-0">
+                    <p class="font-bold text-2xl text-center">Correios</p>
+                    <img class="p-10 mt-8 mb-2" src="./src/asset/contorno-da-caixa-de-carga-com-etiqueta.png" alt="correios">
+                    <p class="text-xl w-full text-center">
+                        Entregas de produtos e encomendas com toda facilidade, 
+                        de acordo com a necessidade do cliente.
+                    </p>
+                </div>
+            </div>
+            <a href="#proposta" class="flex items-center justify-center bg-yellow-500 text-white text-4xl p-4 rounded-lg w-1/3 mt-24 z-10">Quero conhecer!</a>
+        </div>
+    </section>
+
+    <section style="height: 1080px;" class="w-full relative mb-24 mt-32 ">
+        <div class="h-full p-24 bg-black">
+            <div class="section-notebook-title absolute top-44 text-5xl text-white w-1/2">
+                <h1><span class="text-yellow-500 font-bold">Ter seu próprio <span style="color: #2282F2;">sistema de entregas e logística urbana</span> nunca foi tão fácil!</h1>
+                <h2 class="text-white text-xl mt-12 w-8/12">
+                    Comece o seu negócio com quem entende, opte por uma plataforma de delivery 
+                    e logística urbana white-label que forneça experiência de entrega a domicílio
+                    aprimorada, com total suporte no desenvolvimento da sua marca. 
+                </h2>
+            </div>
+            
+            <div class="absolute bottom-0 right-0 w-7/12">
+                <img class="w-full h-full" src="./src/asset/notebook.png" alt="notebook-fretec">
+            </div>
+        </div>
+    </section>
+
+    <section class="relative mt-30 pl-24 pr-24">
+        <div style="color: #020C42" class="w-full flex flex-col items-center mb-56">
+            <h1 class="text-5xl font-bold w-8/12 text-center text-black">
+                <span style="color: #2282F2;">Gerenciamento</span> de entregas e frotas de entregadores
+            </h1>
+            <h2 class="text-xl w-10/12 text-center mt-14">
+                Tenha total controle da logística de entregas e monte uma frota de entregadores 
+                parceiros dentro da sua plataforma. A LOGSTON também te permite realizar uma 
+                ponte entre entregadores autônomos e estabelecimentos que necessitam realizar 
+                entregas mas não querem ou não possuem um sistema de delivery. 
+                <br>
+                <br>
+                <span style="color: #F26A22;" class="font-bold">Otimização de rota para motoristas</span> 
+                <br>
+                <br>
+                Garanta entregas dentro do prazo. O aplicativo atribui para os entregadores 
+                rotas inteligentes mais curtas e rápidas. 
+                <br>
+                <br>
+                <span style="color: #F26A22;" class="font-bold">Rastreamento e atualizações em tempo real</span>
+                <br>
+                <br>
+                Controle e rastreie suas entregas e sempre mantenha-se atualizado sobre o status dos pedidos em tempo real.
+            </h2>
+        </div>
+    </section>
+
+    <section class="bg-white flex items-center justify-center">
+        <div class="p-10 text-white rounded-3xl w-1/2 flex flex-col items-start justify-center bg-black">
+            <div class="w-full z-10" id="contact">
+                <p class="text-5xl font-bold">Entre em <span style="color: #2282F2;"">Contato</span></p>
+                <form class="mt-12 w-full z-10 text-black" id="form-contact">
+                    <input type="text" placeholder="Nome Completo" id="name-contact" required class="p-3 rounded h-10 w-full">
+                    <input type="email" placeholder="E-mail" id="email-contact" required class="p-3 rounded h-10 w-full mt-8">
+                    <div class="mt-8 flex flex-row gap-8">
+                        <input type="text" placeholder="Telefone" id="phone-contact" onkeypress="$(this).mask('(00) 00000-0000')" required class="p-3 rounded h-10 w-1/3">
+                        <select class="pl-3 rounded h-10 w-1/3" id="estado" onchange="buscaCidades2(this.value)" >
+                            <option value="">Estado</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RR">RR</option>
+                            <option value="RO">RO</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                        <select class="pl-3 rounded h-10 w-1/3" id="cidade2">
+                            <option value="">Cidade</option>
+                        </select>
+                    </div>
+                    <div class="w-full mt-8 flex flex-row">
+                        <textarea class="w-2/3 h-32 p-3 rounded" id="text-contact" placeholder="Digite sua mensagem"></textarea>
+                        <div class="w-1/3 p-8">
+                            <button type="submit" id="button-contact" style="background-color: #F26A22;" class="w-full text-2xl h-10 text-white rounded">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="w-full flex flex-col items-center hidden" id="send-contact">
+                <div class="w-10/12 h-full flex flex-col justify-between items-center gap-8">
+                    <h1 class="text-5xl font-bold">PERFEITO!</h1>
+    
+                    <p class="text-white text-2xl font-semibold text-center">Nós já recebemos os seus dados e estaremos entrando em contato logo!</p>
+    
+                    <span class="text-2xl p-3 text-white rounded">Seu dados foram enviados!</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer class="w-full bg-black flex items-center justify-between h-48 mt-8 pl-24 pr-24 relative mt-40">
+        <div class="z-10 ">
+            <a href='#topo'><img src="./src/asset/logo1.png" alt="logo-fretec"></a>
+        </div>
+        <div class="flex flex-col text-white text-2xl font-bold text-center">
+            <p>FRETEC © 2021</p>
+            <p>Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
